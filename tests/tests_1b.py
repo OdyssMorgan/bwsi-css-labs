@@ -37,5 +37,10 @@ def test_invalid_operation():
     with pytest.raises(ValueError, match="Invalid operation. Please choose from 'add', 'subtract', 'multiply', or 'divide'."):
         simple_calculator("", 5, 3)                     # Test for empty operation
 
+def test_my_test():
+    assert simple_calculator("add", 10, -900) == -890      
+    assert simple_calculator("subtract", 1000, -500) == 1500
+    assert simple_calculator("multiply", -5, -72) == 360
+    
 if __name__ == "__main__":
     pytest.main()
